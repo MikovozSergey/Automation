@@ -16,7 +16,6 @@ namespace Group
         {
             this.name = name;
         }
-
         public Student(string name, int[] notes)
         {
             this.name = name;
