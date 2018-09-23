@@ -13,7 +13,7 @@ namespace Console
         {
             Student Sergei = new Student("Sergei Mikovoz", new int[] { 3, 4, 5 });
             Student Vsevolod = new Student("Vsevolod Drobish", new int[] { 7, 6, 4, 3 });
-            Student Artem = new Student("Artem Golovin", new int[] { 9, 8, 7, 6, 5 });
+            Student Artem = new Student("Artem Zagorovskiy", new int[] { 9, 8, 7, 6, 5 });
 
             Student[] studs = new Student[] { Sergei, Vsevolod, Artem};
             Group.Group group = new Group.Group(2, studs);
