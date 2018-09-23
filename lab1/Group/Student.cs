@@ -23,6 +23,7 @@ namespace Group
 
             this.notes = notes;
         }
+
         public double AverageScore()
         {
             int allNotes = 0; 
