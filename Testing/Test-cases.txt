@@ -1,0 +1,102 @@
+1.
+1. test case title
+	Забронировать полет на прошедшую дату
+2. steps to verify
+	Button "flight only"
+	В разделе "From" выбираем страну и город, откуда собираемся лететь
+	В разделе "To" выбираем страну и город, куда летим
+	Выбираем прошедшую дату.
+	Нажимаем кнопку "Find flights" 
+3. expected results	
+	Перенаправление на другую страницу и выдача сообщения "Please enter a valid departure date in the format DD/MM/YY"
+
+2.
+1. test case title
+	Выбор максимального числа детей и младенцев на 1 взрослого
+2. steps to verify
+	Заполняем форму для заказа билета
+	Выбираем 1 взрослого, 8 детей и 8 младенцев
+	Нажимаем кнопку "Find flights" 
+3. expected results
+	Перенаправление на другую страницу и выдача сообщения "For safety reasons onboard, the number of infants travelling cannot exceed the number of adults."
+
+3.
+1. test case title
+	Выбрать дату прибытия, раньше даты вылета
+2. steps to verify
+	Заполняем форму для заказа билета
+	Выбираем дату отправления
+	Выбираем дату прибытия
+	Нажимаем кнопку "Find flights" 
+3. expected results
+	Перенаправление на другую страницу и выдача сообщения "Please enter a valid departure date in the format DD/MM/YY"
+
+4.
+1. test case title
+	Ввести в поле "To" цифры
+2. steps to verify
+	Заполняем форму для заказа билета
+	Выбираем страну для вылета "From"
+	В поле "To" вводим "123671"
+3. expected results
+	Перенаправление на другую страницу и выдача сообщения "Please add the destination you're travelling 'To'."	
+
+5.
+1. test case title
+	Заказать билет, не выбирая количество путешественников
+2. steps to verify
+	Заполняем форму для заказа билета
+	В полях "Adults", "Young Adults", "Children", "Infants" оставляем 0-ые значения.
+	Нажимаем кнопку "Find flights" 
+3. expected results
+	Перенаправление на другую страницу и выдача сообщения "To book a flight online there must be at least one adult passenger travelling."		
+
+6.
+1. test case title
+	Заказать 1 номер, для максимальных числовых значений в полях "Adults", "Young Adults", "Children", "Infants"
+2. steps to verify
+	Button "Hotels"
+	Заполняем форму для заказа номера
+	В поле "Rooms Required" выбираем "1"
+	В полях "Adults", "Young Adults", "Children", "Infants" выбираем максимальные значения	
+	Нажимаем кнопку "Find hotels"
+3. expected results
+	Перенаправление на другую страницу и выдача сообщения "Please enter a valid data for hotel"	
+		
+7.
+1. test case title	
+	Сообщение о невозможности путешенстивя ребенка до 8 лет без сопровождения взрослого
+2. steps to verify
+	Заполняем форму для заказа билета
+	В поле "Children" указываем значение "8" 
+	Нажимаем кнопку "Find flights"
+3. expected results
+	Перенаправление на другую страницу и выдача сообщения "To book a flight online there must be at least one adult passenger travelling."	
+
+8.
+1. test case title
+	Просмотр моих полетов
+2. steps to verify
+	Button "My bookings"
+	Вводим в полях "Booking reference" & "Last name of passenger" несуществующий заказ и имя 
+3. expected results
+	Перенаправление на другую страницу и выдача сообщения "Order with this data does not exist."		
+
+9.
+1. test case title
+	Невозможность возврата автомобиля, раньше его аренды
+2. steps to verify
+	Button "Flight + car"
+	Заполняем поля для заказа автомобиля
+	В поле "Date" вводим прошедшую дату для возврата автомобиля
+3. expected results
+	Время возврата становится таким, что минимальное время является временем вызова.	
+
+10.
+1. test case title
+	Поиск статуса полета невозможен
+2. steps to verify
+	Button "Flight Status"
+	Вводим несуществующий номер рейса
+3. expected results
+	Перенаправление на другую страницу и выдача сообщения "The flight number you entered appears to be incorrect. Please validate the flight number and try again."
