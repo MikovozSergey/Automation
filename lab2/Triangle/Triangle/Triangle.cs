@@ -18,12 +18,8 @@ namespace Triangle
     
 	public static class Triangle
 {
-   /// <summary>
-        
-					/// Determines whether the specified a is triangle.
-        
-					/// </summary>
-        
+   /// Determines whether the specified a is triangle.
+             
 					/// <param name="a">Side a</param>
         
 					/// <param name="b">Side b</param>
@@ -32,7 +28,9 @@ namespace Triangle
         
 					/// <returns>
         
-					///   <c>true</c> if the specified a is triangle; otherwise, <c>false</c>.
+					/// <c>true</c> 
+					    if the specified a is triangle.
+					    <c>false</c>.
         
 					/// </returns>
         
