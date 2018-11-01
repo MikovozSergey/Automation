@@ -1,102 +1,127 @@
+(*) Форма для заказа билета:
+	Выбираем раздел "Flight"
+	В разделе "From" выбираем страну и город, откуда собираемся лететь "New York, New York (All Airports) (NYC), USA" 
+	В разделе "To" выбираем страну и город, куда летим "Frankfurt, Frankfurt (Fra), Germany"
+	Выбираем дату вылета "17.11.18"
+	Выбираем дату прилета "27.11.2018"
+
+(**) Форма для заказа номера:
+	Выбираем раздел "Flight + Hotel"
+	В разделе "From" выбираем страну и город, откуда собираемся лететь "New York, New York (All Airports) (NYC), USA" 
+	В разделе "To" выбираем страну и город, куда летим "Frankfurt, Frankfurt (Fra), Germany"
+	Выбираем дату вылета "17.11.18"
+	Выбираем дату прилета "27.11.2018"		
+
 1.
 1. test case title
 	Забронировать полет на прошедшую дату
 2. steps to verify
-	Button "flight only"
-	В разделе "From" выбираем страну и город, откуда собираемся лететь
-	В разделе "To" выбираем страну и город, куда летим
-	Выбираем прошедшую дату.
-	Нажимаем кнопку "Find flights" 
+	Выбираем раздел "Flight"
+	В разделе "From" выбираем страну и город, откуда собираемся лететь "New York, New York (All Airports) (NYC), USA" 
+	В разделе "To" выбираем страну и город, куда летим "Frankfurt, Frankfurt (Fra), Germany"
+	Выбираем прошедшую дату "22.10.18".
+	Нажимаем кнопку "Searsh" 
 3. expected results	
 	Перенаправление на другую страницу и выдача сообщения "Please enter a valid departure date in the format DD/MM/YY"
+
 
 2.
 1. test case title
 	Выбор максимального числа детей и младенцев на 1 взрослого
 2. steps to verify
-	Заполняем форму для заказа билета
+	Заполняем форму для заказа билета (*) 
 	Выбираем 1 взрослого, 8 детей и 8 младенцев
-	Нажимаем кнопку "Find flights" 
+	Нажимаем кнопку "Search" 
 3. expected results
 	Перенаправление на другую страницу и выдача сообщения "For safety reasons onboard, the number of infants travelling cannot exceed the number of adults."
+
 
 3.
 1. test case title
 	Выбрать дату прибытия, раньше даты вылета
 2. steps to verify
-	Заполняем форму для заказа билета
-	Выбираем дату отправления
-	Выбираем дату прибытия
-	Нажимаем кнопку "Find flights" 
+	Заполняем форму для заказа билета (*)
+	Выбираем дату отправления "10.11.18"
+	Выбираем дату прибытия "09.11.18"
+	Нажимаем кнопку "Search" 
 3. expected results
 	Перенаправление на другую страницу и выдача сообщения "Please enter a valid departure date in the format DD/MM/YY"
+
 
 4.
 1. test case title
 	Ввести в поле "To" цифры
 2. steps to verify
-	Заполняем форму для заказа билета
-	Выбираем страну для вылета "From"
+	Заполняем форму для заказа билета (*)
 	В поле "To" вводим "123671"
 3. expected results
 	Перенаправление на другую страницу и выдача сообщения "Please add the destination you're travelling 'To'."	
+
 
 5.
 1. test case title
 	Заказать билет, не выбирая количество путешественников
 2. steps to verify
-	Заполняем форму для заказа билета
-	В полях "Adults", "Young Adults", "Children", "Infants" оставляем 0-ые значения.
-	Нажимаем кнопку "Find flights" 
+	Заполняем форму для заказа билета (*)
+	При выборе кол-ва людей, для взрослого "Adult" + others ставим 0 значение
 3. expected results
-	Перенаправление на другую страницу и выдача сообщения "To book a flight online there must be at least one adult passenger travelling."		
+	Выдача сообщения "There must be at least one adult per booking for online bookings. To book for young adults travelling alone, please "		
+
 
 6.
 1. test case title
-	Заказать 1 номер, для максимальных числовых значений в полях "Adults", "Young Adults", "Children", "Infants"
+	Заказать 1 комнатный номер, для максимальных числовых значений в полях "Adults", "Children", "Infants"
 2. steps to verify
-	Button "Hotels"
-	Заполняем форму для заказа номера
+	Выбираем раздел "Flight + Hotel"
+	Заполняем форму для заказа номера (**)
 	В поле "Rooms Required" выбираем "1"
 	В полях "Adults", "Young Adults", "Children", "Infants" выбираем максимальные значения	
-	Нажимаем кнопку "Find hotels"
 3. expected results
-	Перенаправление на другую страницу и выдача сообщения "Please enter a valid data for hotel"	
+	Выдача сообщения for Adults "The total number of passengers (excluding infants) must not exceed 9. Find out about "
+			 for Children "The total number of passengers (excluding infants) must not exceed 9. Find out about "		
+		         for Infants "For safety reasons, the number of infants travelling cannot exceed the number of adults."
+			
 		
 7.
 1. test case title	
 	Сообщение о невозможности путешенстивя ребенка до 8 лет без сопровождения взрослого
 2. steps to verify
-	Заполняем форму для заказа билета
-	В поле "Children" указываем значение "8" 
-	Нажимаем кнопку "Find flights"
+	Заполняем форму для заказа билета (*)
+	В поле "Adults" указываем значение "0"
+	В поле "Children" указываем значение возраста "8" 
+	Нажимаем кнопку "Search"
 3. expected results
 	Перенаправление на другую страницу и выдача сообщения "To book a flight online there must be at least one adult passenger travelling."	
 
+
 8.
 1. test case title
-	Просмотр моих полетов
+	Заказ полета from USA, New York to Germany, Frankfurt 
 2. steps to verify
-	Button "My bookings"
-	Вводим в полях "Booking reference" & "Last name of passenger" несуществующий заказ и имя 
+	В разделе "From" выбираем страну и город, откуда собираемся лететь "New York, New York (All Airports) (NYC), USA" 
+	В разделе "To" выбираем страну и город, куда летим "Frankfurt, Frankfurt (Fra), Germany"
+	Выбираем дату вылета "17.11.18"
+	Выбираем дату прилета "27.11.18"	
 3. expected results
-	Перенаправление на другую страницу и выдача сообщения "Order with this data does not exist."		
+	Перенаправление на другую страницу и показ доступных полётов.
+
 
 9.
 1. test case title
 	Невозможность возврата автомобиля, раньше его аренды
 2. steps to verify
-	Button "Flight + car"
-	Заполняем поля для заказа автомобиля
-	В поле "Date" вводим прошедшую дату для возврата автомобиля
+	Выбираем раздел "Flight + car"
+	Убираем галочку в поле "Driver aged between 30 and 70"	
+	Заполняем поля для заказа автомобиля (*)
+	В поле "Driver Age" вводим дату "28.10.05"
 3. expected results
-	Время возврата становится таким, что минимальное время является временем вызова.	
+	Перенаправление на другую страницу и выдача сообщения "We are sorry there is nothing available for the criteria you have entered. Please try alternative dates or another destination"	
 
 10.
 1. test case title
 	Поиск статуса полета невозможен
 2. steps to verify
-	Button "Flight Status"
-	Вводим несуществующий номер рейса
+	Выбираем раздел "Flight Status"
+	Вводим несуществующий номер рейса "198472" 
 3. expected results
 	Перенаправление на другую страницу и выдача сообщения "The flight number you entered appears to be incorrect. Please validate the flight number and try again."
