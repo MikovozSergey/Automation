@@ -39,6 +39,8 @@ namespace WebDriver
         {
             var messageText = homePage.GetErrorsMessages().Text;
             Assert.AreEqual(ErrorMessage, messageText);
-        }
+        
+}
     }
 }
+
