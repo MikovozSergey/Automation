@@ -5,6 +5,14 @@
 
 # User-specific files
 *.suo
+*AssemblyInfo.cs
+*Properties
+*obj
+*bin
+*TestResults
+*packages
+*MigrationBackup
+*.csproj
 *.user
 *.sln.docstates
 
@@ -214,6 +222,5 @@ project.lock.json
 *.Specs_*.html
 
 #####
-# 
-End of core ignore list, below put you custom 'per project' settings (patterns or path)
+# End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
