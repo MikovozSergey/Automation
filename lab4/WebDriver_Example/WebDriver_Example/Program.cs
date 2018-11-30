@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace WebDriver_Example
 {
-    class Program
+    [TestFixture()]
+    public class Test
     {
-        static void Main(string[] args)
+        [OrderTicket()]
+        public void OrderTicket()
         {
             IWebDriver driver = new ChromeDriver();
             driver.Url = "https://www.britishairways.com/travel/home/public/en_us";
@@ -24,7 +26,9 @@ namespace WebDriver_Example
             driver.FindElement(By.ClassName("calendarIcon retDate")).Click();
             driver.FindElement(By.XPath("//*[@ui-state-default ui-state-active='7']")).Click();
             driver.FindElement(By.Id("flightSearchButton")).Click();
-
+            
+            string expUrl = "https://www.britishairways.com/travel/booking/public/en_us/#/flights";
+            Assert.AreEqual(driver.Url, expUrl);
         }
     }
 }
